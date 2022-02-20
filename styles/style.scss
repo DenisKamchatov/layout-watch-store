@@ -1,0 +1,438 @@
+$black-color: black;
+$darkgrey-color: #1f1f1f;
+$lightblack-color: #0f0f0f;
+$grey-color: #969696;
+$lightgrey-color: #d0d0d0;
+$white-color: white;
+
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=PT+Sans&family=Playfair+Display:wght@400;700&display=swap");
+@import "basic-styles";
+
+@mixin padding-top-bottom {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.short-container {
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+header {
+    .header-top {
+        background-color: $black-color;
+        @include padding-top-bottom();
+        font-size: 12px;
+
+        div {
+            padding-left: 10px;
+            font-family: "PT Sans", sans-serif;
+            color: $grey-color;
+        }
+        .header-time {
+            display: flex;
+        }
+        .header-entry {
+            display: flex;
+        }
+    }
+    .header-bottom {
+        background-color: $darkgrey-color;
+
+        h2 {
+            font-size: 30px;
+        }
+        a {
+            color: $grey-color;
+            text-decoration: none;
+            font-family: "PT Sans", sans-serif;
+            font-size: 14px;
+        }
+        .header-bottom-right {
+            display: flex;
+            white-space: nowrap;
+            .header-bottom-like {
+                padding-right: 25px;
+                padding-left: 25px;
+            }
+            .header-bottom-yours {
+                padding-right: 25px;
+                padding-left: 25px;
+            }
+            .header-bottom-settings {
+                padding-right: 25px;
+                padding-left: 25px;
+            }
+            .header-bottom-cart {
+                padding-right: 25px;
+                padding-left: 25px;
+            }
+            .header-bottom-search {
+                padding-right: 25px;
+                padding-left: 25px;
+            }
+            div {
+                padding-top: 25px;
+                padding-bottom: 20px;
+            }
+            div:hover {
+                background-color: $grey-color;
+                a {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}
+
+.section-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    .section-1-cube {
+        width: 320px;
+        height: 320px;
+        border: 5px solid $white-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            text-align: center;
+            h1 {
+                font-family: "Abril Fatface", cursive;
+                font-size: 52px;
+            }
+            h3 {
+                font-family: "PT Sans", sans-serif;
+                font-size: 22px;
+            }
+        }
+    }
+    .section-1-text {
+        text-align: center;
+        max-width: 60%;
+        font-family: "PT Sans", sans-serif;
+        margin-top: 75px;
+        font-size: 16px;
+    }
+}
+
+.section-2 {
+    display: flex;
+    flex-direction: row;
+    background-color: $black-color;
+
+    .section-2-left {
+        flex-basis: 55%;
+        color: $white-color;
+        display: flex;
+        flex-direction: column;
+
+        .section-2-left-top {
+            padding-top: 80px;
+            font-family: "Playfair Display", serif;
+            text-align: center;
+
+            hr {
+                width: 20%;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .section-2-left-bottom {
+            display: flex;
+            justify-content: space-evenly;
+
+            .section-2-left-bottom-row {
+                display: flex;
+                flex-direction: column;
+
+                .outside-box {
+                    background-color: $darkgrey-color;
+                    padding-top: 30%;
+                    padding-bottom: 30%;
+                    padding-left: 25px;
+                    padding-right: 25px;
+                    height: 100% auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 130px;
+                        height: 100% auto;
+                        padding-right: 10%;
+                        padding-left: 10%;
+                    }
+                }
+
+                .row-text {
+                    font-size: 11px;
+
+                    .p-top {
+                        font-family: "Playfair Display", serif;
+                    }
+                    .p-bottom {
+                        font-family: "Playfair Display", serif;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    .section-2-right {
+        height: 100%;
+        flex-basis: 45%;
+
+        .section-2-imgblock {
+            position: relative;
+            text-align: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            .imgblock-text {
+                color: $white-color;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                h1 {
+                    font-family: "Playfair Display", serif;
+                    white-space: nowrap;
+                }
+
+                div {
+                    hr {
+                        width: 40%;
+                        margin-top: 4%;
+                        margin-bottom: 10%;
+                    }
+                    input {
+                        color: $white-color;
+                        background-color: rgba(0, 0, 0, 0);
+                        border: 1px solid white;
+                        padding-left: 6%;
+                        padding-right: 6%;
+                        padding-top: 1.5%;
+                        padding-bottom: 1.5%;
+                        font-family: "PT Sans", sans-serif;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-3 {
+    display: flex;
+    flex-direction: row;
+
+    .section-3-left {
+        flex-basis: 45%;
+        background-color: $black-color;
+        img {
+            width: 100%;
+        }
+    }
+
+    .section-3-right {
+        flex-basis: 55%;
+        background-color: $black-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .section-3-right-top {
+            padding-top: 80px;
+            font-family: "Playfair Display", serif;
+            text-align: center;
+
+            hr {
+                width: 50%;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+        }
+        .section-3-right-center {
+            text-align: center;
+            width: 60%;
+
+            p {
+                font-family: "PT Sans", sans-serif;
+                font-weight: 20;
+                font-size: 12px;
+            }
+        }
+        .section-3-right-bottom {
+            padding-top: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            input {
+                color: $white-color;
+                background-color: rgba(0, 0, 0, 0);
+                border: 1px solid white;
+                padding-left: 6%;
+                padding-right: 6%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                font-family: "PT Sans", sans-serif;
+            }
+        }
+    }
+}
+
+.section-4 {
+    background-color: $black-color;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .section-4-top {
+        font-family: "Playfair Display", serif;
+        text-align: center;
+
+        hr {
+            width: 10%;
+            margin-top: 30px;
+            margin-bottom: 60px;
+        }
+    }
+
+    .section-4-bottom {
+        max-width: 60%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .section-4-bottom-row {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 23%;
+
+            .outside-box {
+                background-color: $darkgrey-color;
+                padding-top: 30%;
+                padding-bottom: 30%;
+                padding-left: 25px;
+                padding-right: 25px;
+                height: 100% auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    max-width: 100%;
+                    height: 100% auto;
+                    padding-right: 10%;
+                    padding-left: 10%;
+                }
+            }
+
+            .row-text {
+                font-size: 11px;
+
+                .p-top {
+                    font-family: "Playfair Display", serif;
+                }
+                .p-bottom {
+                    font-family: "Playfair Display", serif;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.section-5 {
+    background-color: $darkgrey-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    img {
+        display: block;
+        height: 100% auto;
+        flex-basis: 25%;
+    }
+
+    .short-container {
+        display: flex;
+        flex-direction: column;
+        .section-5-top {
+            hr {
+                width: 40%;
+                margin-top: 30px;
+                margin-bottom: 15px;
+            }
+        }
+
+        .section-5-bottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+}
+
+.section-6 {
+    width: 100%;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    h1 {
+        font-size: 22px;
+        font-weight: 300;
+        padding-bottom: 20px;
+    }
+    span {
+        font-family: "PT Sans", sans-serif;
+        font-weight: 20;
+    }
+
+    .short-container {
+        align-items: flex-start;
+        .section-6-row {
+            flex-basis: 30%;
+
+            .mini-blocks {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .mini-block {
+                    background-color: $lightblack-color;
+                    padding: 10px 20px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $lightblack-color;
+    font-size: 12px;
+    font-family: "PT Sans", sans-serif;
+    @include padding-top-bottom();
+
+    span {
+        padding-left: 10px;
+        color: $grey-color;
+    }
+    a {
+        color: $white-color;
+    }
+}
